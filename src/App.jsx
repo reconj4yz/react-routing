@@ -1,9 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import Nav from "./components/Nav";
+import Routing from "./utils/Routing";
 const App = () => {
   return (
-    <div className='bg-sky-400'>App</div>
-  )
-}
+    <>
+      <Nav />
+      <Routing />
+    </>
+  );
+};
 
-export default App
+export default App;
