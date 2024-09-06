@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const User = () => {
   return (
@@ -6,15 +7,16 @@ const User = () => {
       <h1 className="text-5xl font-semibold text-center mb-5 text-red-400">
         Users
       </h1>
-      <p className="mb-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, optio.
-        Libero dolorem nihil assumenda consequatur suscipit deserunt rerum
-        excepturi incidunt eligendi, nemo veritatis maiores voluptas autem vel,
-        soluta rem laborum!
-      </p>
-      <button className="ml-[43%] px-3 py-1 bg-red-300 rounded-md mb-5">
+      <div className=" flex flex-col mt-10 justify-center items-center">
+        <Link className="w-1/2 bg-red-200 hover:bg-red-300 p-4 mt-2" to='/user/william'>William</Link>
+        <Link className="w-1/2 bg-red-200 hover:bg-red-300 p-4 mt-2" to='/user/chris'>Chris</Link>
+        <Link className="w-1/2 bg-red-200 hover:bg-red-300 p-4 mt-2" to='/user/mike'>Mike</Link>
+      </div>
+      <button className="ml-[43%] px-3 py-1 bg-red-300 rounded-md mt-5 mb-5">
         Learn More!
       </button>
+      <hr />
+      <Outlet />
     </div>
   );
 };
